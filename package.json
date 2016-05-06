@@ -1,0 +1,32 @@
+{
+  "name": "react-playground",
+  "version": "1.0.0",
+  "description": "Somewhere for me to mess around with React",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -d --watch",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.7.4",
+    "babel-loader": "^6.2.4",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "babel-jest": "^10.0.1",
+    "babel-polyfill": "^6.7.4",
+    "jest-cli": "^0.10.0",
+    "react-addons-test-utils": "^0.14.8"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "./node_modules/react",
+      "./node_modules/react-dom",
+      "./node_modules/react-addons-test-utils"
+    ]
+  }
+}
