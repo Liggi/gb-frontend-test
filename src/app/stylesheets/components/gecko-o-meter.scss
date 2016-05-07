@@ -1,0 +1,93 @@
+$meter-theme-color: #dfdfdf;
+
+.gecko-o-meter {
+  height: 400px;
+  width: 450px;
+
+  &__current-value, &__min-value, &__max-value {
+    color: $meter-theme-color;
+  }
+
+  &__min-value, &__max-value {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    width: 100px;
+  }
+
+  &__current-value {
+    display: block;
+    font-size: 80px;
+    text-align: center;
+  }
+
+  &__min-value {
+    left: -17px;
+    position: absolute;
+  }
+
+  &__max-value {
+    right: -17px;
+    position: absolute;
+  }
+
+  &__semi-circle {
+    height: 200px;
+    margin: 20px auto 10px auto;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+
+    &:before {
+      border: 17px solid $meter-theme-color;
+      border-radius: 100%;
+      box-sizing: border-box;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 200%;
+      width: 100%;
+    }
+
+  }
+
+  &__needle {
+    bottom: 0px;
+    height: 7px;
+    position: absolute;
+    width: 100%;
+
+    &:before {
+      background-color: $meter-theme-color;
+      border-radius: 10px;
+      bottom: 0px;
+      content: "";
+      display: block;
+      height: 7px;
+      left: 30px;
+      position: absolute;
+      width: calc(50% - 30px);
+    }
+  }
+
+  &__refresh {
+    border: 1px solid $meter-theme-color;
+    border-radius: 5px;
+    bottom: 0px;
+    display: inline-block;
+    left: 50%;
+    padding: 8px 25px;
+    position: absolute;
+    @include translate(-50%, 0);
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+      background-color: $meter-theme-color;
+      color: $primary-bg-color;
+      cursor: pointer;
+    }
+  }
+
+}

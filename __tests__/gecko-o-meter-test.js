@@ -23,8 +23,8 @@ describe('Gecko-O-Meter',() => {
     expect(result.props.className).toEqual('gecko-o-meter');
   });
 
-  it('has markup for a needle', () => {
-    expect(has_child_with_class(result.props.children, "gecko-o-meter__needle")).toBeTruthy();
+  it('has markup for dial', () => {
+    expect(has_child_with_class(result.props.children, "gecko-o-meter__semi-circle")).toBeTruthy();
   });
 
   it('has markup for a current value', () => {
@@ -37,6 +37,10 @@ describe('Gecko-O-Meter',() => {
 
   it('has markup for a max value', () => {
     expect(has_child_with_class(result.props.children, "gecko-o-meter__max-value")).toBeTruthy();
+  });
+
+  it('has markup for a refresh button', () => {
+    expect(has_child_with_class(result.props.children, "gecko-o-meter__refresh")).toBeTruthy();
   });
 
 });

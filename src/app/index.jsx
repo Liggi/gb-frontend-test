@@ -5,10 +5,7 @@ import GeckoOMeter from './components/GeckoOMeter';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <GeckoOMeter />
-        Hello, world!
-      </div>
+      <GeckoOMeter />
     );
   }
 }
