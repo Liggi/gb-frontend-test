@@ -3,7 +3,7 @@ import React from 'react';
 class GeckoOMeter extends React.Component {
   render() {
     return (
-      <div></div>
+      <div className="gecko-o-meter"></div>
     );
   }
 

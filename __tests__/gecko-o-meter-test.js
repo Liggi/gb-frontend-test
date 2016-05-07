@@ -5,16 +5,18 @@ import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import GeckoOMeter from '../src/app/components/GeckoOMeter';
 
-let component;
-
 describe('Gecko-O-Meter',() => {
-
+  let component = (<GeckoOMeter />);
+  let result;
+ 
   beforeEach(() => {
-    component = TestUtils.renderIntoDocument( <GeckoOMeter /> );
+    let shallowRenderer = TestUtils.createRenderer();
+    shallowRenderer.render(component);
+    result = shallowRenderer.getRenderOutput();
   });
 
   it('should exist', () => {
-    expect(TestUtils.isCompositeComponent(component)).toBeTruthy();
+    expect(result.props.className).toEqual('gecko-o-meter');
   });
 
 });

@@ -13,8 +13,8 @@
   "dependencies": {
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "webpack": "^1.12.14",
     "whatwg-fetch": "^1.0.0"
   },
@@ -22,7 +22,7 @@
     "babel-jest": "^10.0.2",
     "babel-polyfill": "^6.7.4",
     "jest-cli": "^0.10.0",
-    "react-addons-test-utils": "^0.14.8",
+    "react-addons-test-utils": "^15.0.0",
     "webpack-dev-server": "^1.14.1"
   },
   "jest": {
