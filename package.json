@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
-    "test": "jest"
+    "test": "jest",
+    "sass": "sass --watch src/app/stylesheets/main.scss:build/app/stylesheets/main.css"
   },
   "author": "",
   "license": "ISC",

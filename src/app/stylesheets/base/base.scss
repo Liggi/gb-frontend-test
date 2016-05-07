@@ -1,0 +1,15 @@
+$primary-bg-color: #2a2a2a;
+$primary-text-color: #dfdfdf;
+
+body {
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include translate(-50%, -50%);
+}
