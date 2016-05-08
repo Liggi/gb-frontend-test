@@ -1,6 +1,5 @@
 jest.unmock('../src/app/modules/gecko-o-meter-api.js');
 
-import 'whatwg-fetch'
 import meterData from '../src/app/modules/gecko-o-meter-api.js';
 
 describe('Gecko-O-Meter API',() => {

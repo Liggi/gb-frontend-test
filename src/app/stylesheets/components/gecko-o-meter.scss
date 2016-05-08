@@ -58,6 +58,7 @@ $meter-theme-color: #dfdfdf;
     height: 7px;
     position: absolute;
     width: 100%;
+    @include transition(transform 0.8s ease-in-out);
 
     &:before {
       background-color: $meter-theme-color;

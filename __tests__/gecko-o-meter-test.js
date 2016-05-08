@@ -42,5 +42,4 @@ describe('Gecko-O-Meter',() => {
   it('has markup for a refresh button', () => {
     expect(has_child_with_class(result.props.children, "gecko-o-meter__refresh")).toBeTruthy();
   });
-
 });
