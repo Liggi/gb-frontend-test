@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import GeckoOMeter from './components/GeckoOMeter';
+import meterData from './modules/gecko-o-meter-api.js';
 
 class App extends React.Component {
   render() {
     return (
-      <GeckoOMeter />
+      <GeckoOMeter dataSource={meterData.get} />
     );
   }
 }

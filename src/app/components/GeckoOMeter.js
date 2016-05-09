@@ -1,5 +1,4 @@
 import React from 'react';
-import meterData from '../modules/gecko-o-meter-api.js';
 
 class GeckoOMeter extends React.Component {
   constructor(props) {
@@ -54,7 +53,7 @@ class GeckoOMeter extends React.Component {
   loadData() {
     let component = this;
 
-    meterData.get().then(function (data) {
+    this.props.dataSource().then(function (data) {
       component._setValues(data);
     });
   }

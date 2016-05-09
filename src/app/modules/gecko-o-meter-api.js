@@ -1,18 +1,12 @@
 import 'whatwg-fetch'
+const url = "https://widgister.herokuapp.com/challenge/frontend";
 
-module.exports = function () {
+function get() {
+  return new Promise(function(resolve, reject) {
+    fetch(url)
+      .then(res => resolve(res.json()))
+      .catch(reject);
+  });
+}
 
-  const url = "https://widgister.herokuapp.com/challenge/frontend";
-
-  function get() {
-    return new Promise(function(resolve, reject) {
-      fetch(url)
-        .then(res => resolve(res.json()))
-        .catch(reject);
-    });
-  }
-
-  return {
-    get
-  }
-}()
+module.exports = { get };
