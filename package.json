@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack -d --watch",
     "test": "jest",
-    "sass": "sass --watch src/app/stylesheets/main.scss:build/app/stylesheets/main.css"
+    "sass": "sass --watch src/app/stylesheets/main.scss:build/app/stylesheets/main.css",
+    "app": "sass src/app/stylesheets/main.scss:build/app/stylesheets/main.css | webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
