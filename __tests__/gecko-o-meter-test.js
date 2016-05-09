@@ -50,15 +50,15 @@ describe('Gecko-O-Meter',() => {
   });
 
   pit('sets values', (done) => {
-    component = TestUtils.renderIntoDocument(component);
-    let renderedDom = ReactDOM.findDOMNode(component);
+    let meter = TestUtils.renderIntoDocument(component);
+    let renderedDom = ReactDOM.findDOMNode(meter);
 
     return (new Promise(function(resolve) { resolve(); }).then(function () {
       expect(mockData.mock.calls.length).toBe(1);
 
-      expect(component.state.current_value).toBe(10);
-      expect(component.state.min_value).toBe(1);
-      expect(component.state.max_value).toBe(20);
+      expect(meter.state.current_value).toBe(10);
+      expect(meter.state.min_value).toBe(1);
+      expect(meter.state.max_value).toBe(20);
 
       let current_value = renderedDom.querySelectorAll('.gecko-o-meter__current-value')[0].textContent,
           min_value = renderedDom.querySelectorAll('.gecko-o-meter__min-value')[0].textContent,
@@ -68,5 +68,18 @@ describe('Gecko-O-Meter',() => {
       expect(min_value).toBe('£1');
       expect(max_value).toBe('£20');
     }));
+  });
+
+  pit('has a needle angled correctly on the dial', (done) => {
+    let meter = TestUtils.renderIntoDocument(component);
+    let renderedDom = ReactDOM.findDOMNode(meter);
+
+    return (new Promise(function(resolve) { resolve(); }).then(function () {
+      let needle = renderedDom.querySelectorAll('.gecko-o-meter__needle')[0];
+      let transform_angle = needle.style.transform;
+
+      expect(needle.style.transform).toBe('rotate(85deg)');
+    }));
+
   });
 });

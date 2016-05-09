@@ -35,13 +35,10 @@ class GeckoOMeter extends React.Component {
   _setNeedlePosition(value, min, max) {
     let base_max = max - min,
         base_value = value - min,
-        degrees = (base_value / base_max) * 180;
+        degrees = Math.round((base_value / base_max) * 180);
 
-    if(degrees < 0)
-      degrees = 0;
-
-    if(degrees > 180)
-      degrees = 180;
+    degrees = degrees >= 0 ? degrees : 0;
+    degrees = degrees <= 180 ? degrees : 180;
 
     this.setState({
       needle_css: {
