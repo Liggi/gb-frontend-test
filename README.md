@@ -15,6 +15,8 @@ If you want to run it locally, simply clone the repository and then run:
 Once this is done, run:
 
     npm run app
+    
+The development server should automatically start at `http://localhost:8080`.
 
 ## Where would I go next?
 
