@@ -1,7 +1,5 @@
 # Geckoboard Front-End Coding Challenge
 
-Hi guys!
-
 Here's my solution to the coding challenge. I decided to tackle this in React; it's not necessarily what I know best, but I figured it was the easiest way for you to get a feel for my level of ability in this area.
 
 I've hosted it online [here](http://gbmeter.s3-website-us-east-1.amazonaws.com/), for easy viewing.
